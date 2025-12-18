@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>puzzle</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="puzzle-container">
+        <div class="puzzle-box">
+          <h1 class="puzzle-title">🔐 El Acertijo</h1>
+          <p class="puzzle-hint">Descifra el lenguaje oculto...</p>
+
+          <div class="input-group">
+            <input
+              type="text"
+              id="puzzleInput"
+              class="puzzle-input"
+              placeholder="Ingresa tu respuesta"
+              autocomplete="off"
+            />
+            <button id="checkButton" class="puzzle-button">
+              <span>Verificar</span>
+              <svg
+                class="button-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </button>
+          </div>
+
+          <div id="messageBox" class="message-box hidden">
+            <p class="message-text"></p>
+            <p class="message-clue"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
