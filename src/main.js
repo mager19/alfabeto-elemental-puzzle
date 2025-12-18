@@ -56,7 +56,7 @@ function showSuccessMessage() {
   
   // Redirect to success page after a short delay
   setTimeout(() => {
-    window.location.href = '/success.html';
+    window.location.href = 'success.html'; // Relative path for GitHub Pages
   }, 1500);
 }
 
