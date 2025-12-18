@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>puzzle</title>
+    <script type="module" crossorigin src="/assets/index-DH7qILE2.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DKcG2EOl.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="puzzle-container">
+        <!-- Instructions Panel -->
+        <div class="instructions-panel">
+          <h2 class="instructions-title">📜 Instrucciones</h2>
+          <div class="instructions-content">
+            <p>Ante ti hay una secuencia de números.</p>
+
+            <p>
+              No representan una operación matemática ni deben sumarse, restarse
+              o compararse entre sí.<br />
+              <strong>Cada número es una referencia, no un valor.</strong>
+            </p>
+
+            <p>
+              Si sabes dónde buscar, descubrirás que cada uno apunta a una
+              <em>pieza fundamental de la materia</em>, parte de un conjunto
+              ordenado que se estudia desde hace siglos.
+            </p>
+
+            <p>
+              Al transformar correctamente cada número y unir los resultados en
+              el orden dado, aparecerá una palabra clave que es la respuesta al
+              acertijo.
+              <br />
+              <em
+                >el guión es importante, el guión hace parte de la respuesta</em
+              >
+            </p>
+
+            <p class="instructions-action">
+              Escríbela en el cuadro de texto y comprueba si tu razonamiento ha
+              sido el correcto.
+            </p>
+
+            <div class="numbers-clue">
+              <strong>Números:</strong> 6 92 68 76 - 23
+            </div>
+          </div>
+        </div>
+
+        <!-- Puzzle Box -->
+        <div class="puzzle-box">
+          <h1 class="puzzle-title">🔐 El Acertijo</h1>
+          <p class="puzzle-hint">Descifra el lenguaje oculto...</p>
+
+          <div class="input-group">
+            <input
+              type="text"
+              id="puzzleInput"
+              class="puzzle-input"
+              placeholder="Ingresa tu respuesta"
+              autocomplete="off"
+            />
+            <button id="checkButton" class="puzzle-button">
+              <span>Verificar</span>
+              <svg
+                class="button-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </button>
+          </div>
+
+          <div id="messageBox" class="message-box hidden">
+            <p class="message-text"></p>
+            <p class="message-clue"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
