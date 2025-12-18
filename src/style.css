@@ -67,14 +67,98 @@ body {
 }
 
 .puzzle-container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
   justify-content: center;
-  padding: 20px;
+  padding: 30px 20px;
   width: 100%;
-  max-width: 500px;
+  max-width: 1100px;
   position: relative;
   z-index: 1;
+}
+
+/* Instructions Panel */
+.instructions-panel {
+  background: rgba(0, 48, 73, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(102, 155, 188, 0.2);
+  border: 1px solid rgba(102, 155, 188, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.instructions-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(102, 155, 188, 0.4);
+}
+
+.instructions-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--light-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.instructions-content {
+  color: var(--cream);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.instructions-content p {
+  margin-bottom: 16px;
+}
+
+.instructions-content strong {
+  color: var(--light-blue);
+  font-weight: 600;
+}
+
+.instructions-content em {
+  color: var(--light-blue);
+  font-style: italic;
+}
+
+.instructions-action {
+  color: var(--light-blue);
+  font-weight: 500;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(102, 155, 188, 0.2);
+}
+
+.numbers-clue {
+  background: rgba(193, 18, 31, 0.2);
+  border: 2px solid var(--bright-red);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--cream);
+  font-weight: 600;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(193, 18, 31, 0.3);
+}
+
+.numbers-clue strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--bright-red);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .puzzle-box {
@@ -264,7 +348,31 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 640px) {
+@media (max-width: 968px) {
+  .puzzle-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .instructions-panel {
+    order: -1; /* Instructions appear first on mobile */
+    padding: 24px 20px;
+  }
+
+  .instructions-title {
+    font-size: 1.5rem;
+  }
+
+  .instructions-content {
+    font-size: 0.9rem;
+  }
+
+  .numbers-clue {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
   .puzzle-box {
     padding: 32px 24px;
   }
